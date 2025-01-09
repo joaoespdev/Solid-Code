@@ -2,6 +2,7 @@ package com.equipeacademia.project;
 
 //S- Single Responsibility Principle
 // A classe deve ter apenas uma responsabilidade!
+//asdfasdfasdf
 public class SrpRobot {
     public boolean turnon = true;
 
