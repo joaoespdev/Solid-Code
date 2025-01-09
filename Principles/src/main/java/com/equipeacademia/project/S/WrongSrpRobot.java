@@ -1,4 +1,4 @@
-package com.equipeacademia.project;
+package com.equipeacademia.project.S;
 
 //S- Single Responsibility Principle
 // A classe deve ter apenas uma responsabilidade!
