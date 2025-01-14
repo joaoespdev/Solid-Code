@@ -1,5 +1,7 @@
 package com.equipeacademia.project.S;
 
+import java.awt.*;
+
 //S- Single Responsibility Principle
 // A classe deve ter apenas uma responsabilidade!
 public class SrpRobot {
@@ -34,12 +36,12 @@ public class SrpRobot {
         }
     }
 
-    public static class DevRobot extends SrpRobot {
-        public void programar() {
-            System.out.println("O robo está programando. ☕🚀");
+    public static class PainterRobot extends SrpRobot {
+        public void pintar() {
+            System.out.println("O robo está pintando um quadro. ⛺");
         }
 
-        public DevRobot() {
+        public PainterRobot() {
 
         }
     }
@@ -56,9 +58,9 @@ public class SrpRobot {
         gardenerRobot1.andar();
         gardenerRobot1.plantar();
 
-        DevRobot devRobot1 = new DevRobot();
-        devRobot1.andar();
-        devRobot1.programar();
+        PainterRobot painterRobot1 = new PainterRobot();
+        painterRobot1.andar();
+        painterRobot1.pintar();
 
     }
 

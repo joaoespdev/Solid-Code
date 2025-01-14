@@ -46,12 +46,12 @@ public class WrongSrpRobot {
         }
     }
 
-    public static class DevRobot extends SrpRobot.GardenerRobot {
-        public void programar() {
-            System.out.println("O robo está programando. ☕🚀");
+    public static class PainterRobot extends SrpRobot.GardenerRobot {
+        public void pintar() {
+            System.out.println("O robo está pintando um quadro. ⛺");
         }
 
-        public DevRobot() {
+        public PainterRobot() {
 
         }
     }
@@ -72,10 +72,10 @@ public class WrongSrpRobot {
         gardenerRobot1.divulgar();
         gardenerRobot1.vender();
 
-        DevRobot devRobot1 = new DevRobot();
-        devRobot1.andar();
-        devRobot1.programar();
-        devRobot1.plantar();
+        PainterRobot painterRobot1 = new PainterRobot();
+        painterRobot1.andar();
+        painterRobot1.pintar();
+        painterRobot1.plantar();
 
     }
 
