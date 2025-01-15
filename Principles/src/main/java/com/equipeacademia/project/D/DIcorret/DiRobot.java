@@ -1,45 +1,47 @@
 package com.equipeacademia.project.D.DIcorret;
 
 //Interface para uma ferramenta de corte
-interface Cutter{
-    String cut();
+interface CuttingTool{
+    String cutPizza();
 }
 
 //Implementação de um cortador de pizza
-class PizzaCutter implements Cutter{
-    public String cut(){
-        return "Cutting pizza with PizzaCutter.";
+class PizzaCutter implements CuttingTool{
+    @Override
+    public String cutPizza(){
+        return "🍕 I cut pizza with my pizza cutter arm!";
     }
 }
 
-//Implementação de uma tesoura
-class Scissors implements Cutter{
-    public String cut(){
-        return "Cutting pizza with Scissors.";
+//Implementação de uma faca
+class Knife implements CuttingTool{
+    @Override
+    public String cutPizza(){
+        return "🍕 Know, I cut pizza with a sharp knife!";
     }
 }
 
 class Robot{
-    private Cutter cutter;
+    private CuttingTool cuttingTool;
 
-    public Robot(Cutter cutter){
-        this.cutter = cutter;
+    public Robot(CuttingTool cuttingTool){
+        this.cuttingTool = cuttingTool;
     }
 
-    public String cutPizza(){
-        return cutter.cut();
+    public void serverPizza(){
+        System.out.println(cuttingTool.cutPizza());
     }
 }
 
 public class DiRobot {
     public static void main(String[] args) {
-        Cutter pizzaCutter = new PizzaCutter();
-        Cutter scissors = new Scissors();
+        CuttingTool pizzaCutter = new PizzaCutter(); // Faca de pizza
+        CuttingTool knife = new Knife(); // Faca comum
 
-        Robot robotWithPizzaCutter = new Robot(pizzaCutter);
-        Robot robotWithScissors = new Robot(scissors);
+        Robot pizzaBotWithCutter = new Robot(pizzaCutter);
+        pizzaBotWithCutter.serverPizza(); // Resultado: "🍕 I cut pizza with my pizza cutter arm!"
 
-        System.out.println(robotWithPizzaCutter.cutPizza());
-        System.out.println(robotWithScissors.cutPizza());
+        Robot pizzaBotWithKnife = new Robot(knife);
+        pizzaBotWithKnife.serverPizza(); // Resultado: "🍕 Know, I cut pizza with a sharp knife!"
     }
 }
